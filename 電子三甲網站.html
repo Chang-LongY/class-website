@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>111屆大甲高工 電子三甲</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #001f3f; /* 深藍背景 */
+            color: #00bfff; /* 淺藍字體顏色 */
+        }
+
+        /* 封面圖片輪播區 */
+        header {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+        }
+
+        .slideshow {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .slideshow img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+        }
+
+        .slideshow img.active {
+            opacity: 1;
+        }
+
+        nav {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        nav a {
+            display: inline-block;
+            margin: 0 15px;
+            padding: 10px 20px;
+            background-color: #004080; /* 深藍色按鈕背景 */
+            border: 2px solid #00bfff; /* 淺藍色按鈕邊框 */
+            color: #00bfff; /* 淺藍色字體 */
+            font-size: 1.2em;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #00bfff; /* 淺藍色按鈕背景 */
+            color: #001f3f; /* 深藍色字體 */
+        }
+
+        .container {
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* 網頁主題 */
+        h1 {
+            font-size: 50px; /* 字體大小 */
+            font-family: 'Comic Sans MS', cursive; /* 少女風字體 */
+            color: #ff69b4; /* 粉紅色字體 */
+            margin: 20px 0;
+        }
+
+        /* 導師照片 */
+        .teacher-photo {
+            width: 200px; /* 設定導師照片的寬度 */
+            border-radius: 10px; /* 圓角邊框 */
+        }
+
+        /* 導師介紹表格 */
+        table {
+            width: auto; /* 調整表格為自動寬度 */
+            margin: 20px auto; /* 中央對齊 */
+            border-collapse: collapse;
+            text-align: left; /* 靠左排列 */
+        }
+
+        table, th, td {
+            border: 1px solid #00bfff;
+            padding: 10px;
+            color: #00bfff;
+        }
+
+        th {
+            background-color: #004080;
+            color: #fff;
+        }
+
+        /* 學習紀錄照片區 */
+	.photo-grid {
+   	 display: flex; /* 使用彈性盒模型 */
+   	 flex-wrap: wrap; /* 允許換行 */
+    	justify-content: center; /* 中央對齊 */
+	}
+
+	.photo-grid img {
+ 	   width: 25%; /* 每張圖片寬度設置為25% */
+   	 height: auto; /* 高度自動 */
+   	 border: 2px solid #00bfff;
+   	 border-radius: 10px;
+    	margin: 5px; /* 增加一些間距 */
+	}
+
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            padding: 10px;
+            background-color: #004080; /* 深藍色背景 */
+            border-top: 2px solid #00bfff; /* 淺藍色邊框 */
+            color: #00bfff; /* 淺藍色字體 */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="slideshow">
+            <img src="cover1.jpg" class="active" alt="封面照片1">
+            <img src="cover2.jpg" alt="封面照片2">
+            <img src="cover3.jpg" alt="封面照片3">
+        </div>
+    </header>
+
+    <h1>大甲高工 111屆電子三甲</h1> <!-- 網頁主題 -->
+
+    <nav>
+        <a href="#" onclick="showSection('affairs')">班級事務與導師介紹</a>
+        <a href="#" onclick="showSection('competition')">班級競賽</a>
+        <a href="#" onclick="showSection('photos')">學習紀錄照片</a>
+        <a href="#" onclick="showSection('achievements')">學習成果</a>
+        <a href="parents.html">家長專區</a>
+    </nav>
+
+    <div class="container">
+        <!-- 導師介紹 -->
+        <div id="affairs" class="section">
+            <h2>班級事務與導師介紹</h2>
+            <img src="teacher_photo.jpg" alt="導師照片" class="teacher-photo"> <!-- 導師照片 -->
+            <table>
+                <tr>
+                    <th>姓名</th>
+                    <td>張朧勻</td>
+                </tr>
+                <tr>
+                    <th>專長</th>
+                    <td>電子學、基本電學</td>
+                </tr>
+                <tr>
+                    <th>教學與成效</th>
+                    <td>
+                        <ul>
+                            <li>國立錄取升學率: 110學年度升學榜單46人國立/全科68人（國立錄取率68%）</li>
+                            <li>證照輔導成效:
+                                <ul>
+                                    <li>111年 電子一甲 工業電子丙級 32/37（通過率86.4%）</li>
+                                    <li>110年 電子三甲/乙 數位電子乙級 39/55（通過率71%）</li>
+                                    <li>109年 電子三甲/乙 數位電子乙級 46/57（通過率80%）</li>
+                                    <li>108年 電子一乙 工業電子丙級 31/33（通過率94%）</li>
+                                </ul>
+                            </li>
+                            <li>競賽指導: 
+                                <ul>
+                                    <li>112年 全國技能競賽分區賽-工業電子職種</li>
+                                    <li>111年 教育部創造力競賽</li>
+                                    <li>111年 勞動部分區賽-行動裝置設計職種</li>
+                                    <li>110年 工科賽-數位電子職種</li>
+                                    <li>109年 全國專題競賽</li>
+                                    <li>109年 勞動部分區賽-應用電子職種</li>
+                                    <li>109年 台中市科展</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th>班級經營理念</th>
+                    <td>每天開開心心上學，平平安安回家。</td>
+                </tr>
+                <tr>
+                    <th>教學理念</th>
+                    <td>盡己所能，讓沒有錢補習的同學不必補習，在學校學就足夠充實了。</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- 學習紀錄照片 -->
+        <div id="photos" class="section">
+            <h2>學習紀錄照片</h2>
+            <h3>假日讀書與晚自習</h3>
+            <div class="photo-grid">
+                <!-- 添加相應的照片 -->
+                <img src="study(1).jpg" alt="假日讀書1">
+                <img src="study(2).jpg" alt="假日讀書2">
+                <img src="study(3).jpg" alt="假日讀書3">
+		<img src="study(4).jpg" alt="假日讀書4">
+                <img src="study(5).jpg" alt="假日讀書5">
+                <img src="study(6).jpg" alt="假日讀書6">
+
+                <!-- 更多照片... -->
+            </div>
+            <h3>實習實作</h3>
+            <div class="photo-grid">
+                <img src="practice1.jpg" alt="實習實作1">
+                <img src="practice2.jpg" alt="實習實作2">
+                <img src="practice3.jpg" alt="實習實作3">
+                <!-- 更多照片... -->
+            </div>
+            <h3>日常生活點點滴滴</h3>
+            <div class="photo-grid">
+                <img src="life1.jpg" alt="日常生活1">
+                <img src="life2.jpg" alt="日常生活2">
+                <img src="life3.jpg" alt="日常生活3">
+                <!-- 更多照片... -->
+            </div>
+        </div>
+
+        <div id="competition" class="section">
+            <h2>班級競賽</h2>
+            <p>這裡是班級競賽的內容。</p>
+        </div>
+
+        <div id="achievements" class="section">
+            <h2>學習成果</h2>
+            <p>這裡是學習成果的內容。</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Ricky | 111屆大甲高工 電子三甲</p>
+    </footer>
+
+    <script>
+        var slideIndex = 0;
+        var slides = document.querySelectorAll('.slideshow img');
+        
+        function showSlides() {
+            slides.forEach((slide, index) => {
+                slide.style.opacity = index === slideIndex ? '1' : '0';
+            });
+            slideIndex = (slideIndex + 1) % slides.length;
+            setTimeout(showSlides, 5000); // 每5秒切換
+        }
+        
+        showSlides();
+
+        function showSection(sectionId) {
+            var sections = document.querySelectorAll('.section');
+            sections.forEach(function(section) {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
